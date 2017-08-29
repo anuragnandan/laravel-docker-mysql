@@ -1,0 +1,24 @@
+version: '3'
+services:
+  web:
+    ports:
+      - "8080:80"
+    volumes:
+      - ./:/code
+    build:
+      context: 'images/nginx/.'
+      args:
+        - host=ivr.dev
+        - root=/code/public
+    links:
+      - php
+  php:
+    build: 'images/php/.'
+    links:
+      - db
+    volumes:
+      - ./:/code
+  db:
+    build: 'images/db/.'
+    ports:
+      - "3306:3306"

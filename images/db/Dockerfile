@@ -1,0 +1,5 @@
+FROM percona:5.5.51
+
+ENV MYSQL_ROOT_PASSWORD=Password1
+
+EXPOSE 3306
