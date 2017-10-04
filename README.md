@@ -6,9 +6,7 @@ This project creates a laravel project and runs on docker, instead of homestead/
 
 ``` bash
 #create a laravel project
-$ composer create-project laravel/laravel --prefer-dist .
-$ cp .env.example.docker .env
-$ mkdir storage/database
+$ ./build.sh
 
 #Start docker
 $ docker-compose up -d
