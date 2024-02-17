@@ -1,4 +1,4 @@
-FROM nginx:1.20
+FROM nginx:1.25.3
 
 COPY ./site.template /etc/nginx/conf.d/site.template
 
